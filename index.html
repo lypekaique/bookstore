@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+</head>
+<body>
+    <!-- Container Principal do Formulário -->
+    <div class="form-lead" id="formLead">
+        <div class="container">
+            <!-- Seção do Formulário -->
+            <div class="form-container">
+                <!-- Formulário Principal -->
+                <form id="form">
+                    <h2>Para Mais Informação</h2>
+                    
+                    <div class="input-box">
+                        <i class="fa-solid fa-user" style="color: #e29128;"></i>
+                        <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+                    </div>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-envelope" style="color: #e29128;"></i>
+                        <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required>
+                        <span id="email-error" class="error"></span>
+                    </div>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-phone" style="color: #e29128;"></i>
+                        <input type="text" id="telefone" name="telefone" placeholder="Telefone com DDD" required>
+                    </div>
+
+                    <div class="button-container">
+                        <button id="enviar" type="submit">Enviar Cadastro</button>
+                    </div>
+                </form>
+                
+                <!-- Container de Loading (inicialmente oculto) -->
+                <div class="loading-container" id="loading">
+                    <img src="assets/IMG/loading.gif" alt="Processando" class="loading-gif">
+                    <div class="welcome-message" id="welcomeMessage"></div>
+                </div>
+            </div>
+
+            <!-- Seção da Imagem com Overlay -->
+            <div class="image-section">
+                <div class="overlay-background">
+                    <div class="overlay-content">
+                        <div class="text-container">
+                            <h2>Bem-vindo</h2>
+                            <p>Faça parte da nossa comunidade</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Página Principal (inicialmente oculta) -->
+    <div class="main-page" id="mainPage">
+        <header class="main-header">
+            <h1>Bem-vindo, <span id="welcomeName"></span>!</h1>
+        </header>
+        
+        <main class="main-content">
+            <section class="content-section">
+                <h2>foda</h2>
+                <p>foda</p>
+                <!-- Adicione mais conteúdo conforme necessário -->
+            </section>
+        </main>
+        
+        <footer class="main-footer">
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> Todos os direitos reservados</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/JS/engine.js"></script>
+    <script>
+        // Atualiza o ano atual no footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
