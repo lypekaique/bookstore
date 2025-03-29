@@ -247,12 +247,14 @@ body {
 
 .header-container{
   display: flex;
+  align-items: center;
+  gap: 10px;
   justify-content: space-between;
 }
 
 .header-container img{
-  width: 250px;
-  height: 350px;
+  width: 60px;
+  height: 60px;
 }
 
 .main-content {
