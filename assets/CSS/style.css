@@ -154,13 +154,11 @@ body {
 .overlay-content h2 {
   font-size: 32px;
   font-weight: 600;
-  color: var(--black);
 }
 
 .overlay-content p {
   font-size: 18px;
   line-height: 1.5;
-  color: var(--black);
 }
 
 /* ===== LOADING E ANIMAÇÕES ===== */
@@ -243,8 +241,18 @@ body {
 }
 
 .main-header {
-  text-align: center;
-  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-container img{
+  width: 250px;
+  height: 350px;
 }
 
 .main-content {
