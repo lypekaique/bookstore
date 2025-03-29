@@ -65,11 +65,11 @@ async function submitFormWithAnimation(event) {
   // Elementos DOM
   const elements = {
     form: document.getElementById("form"),
+    formLead: document.getElementById("formLead"),
     formContainer: document.querySelector(".form-container"),
     imageSection: document.querySelector(".image-section"),
     loading: document.getElementById("loading"),
     welcomeMessage: document.getElementById("welcomeMessage"),
-    formLead: document.getElementById("formLead"),
     mainPage: document.getElementById("mainPage"),
     mainHeader: document.querySelector(".main-header"),
     mainContent: document.querySelector(".main-content"),
@@ -81,10 +81,17 @@ async function submitFormWithAnimation(event) {
   elements.form.style.opacity = "0";
   await wait(300);
 
-  // 2. Animação de esmagamento
-  elements.formContainer.style.width = "100%";
-  elements.imageSection.style.width = "0%";
-  elements.imageSection.style.opacity = "0";
+  // 2. Animação de esmagamento responsiva
+  if (window.innerWidth <= 768) {
+    // Mobile: animação vertical
+    elements.formLead.classList.add("mobile-smash-animation");
+    elements.formContainer.classList.add("mobile-expand-animation");
+    elements.imageSection.classList.add("mobile-crush-animation");
+  } else {
+    // Desktop: animação horizontal
+    elements.formContainer.classList.add("desktop-smash-animation");
+    elements.imageSection.classList.add("desktop-smash-hide");
+  }
   await wait(500);
 
   // 3. Mostra o loading
@@ -104,9 +111,9 @@ async function submitFormWithAnimation(event) {
   elements.welcomeMessage.classList.add("slide-up");
   await wait(800);
 
-  // 6. Prepara e mostra a página principal (ainda sem overflow)
+  // 6. Prepara e mostra a página principal
   elements.mainPage.style.display = "block";
-  await wait(10); // Pequeno delay para renderização
+  await wait(10);
   elements.mainPage.style.opacity = "1";
 
   // 7. Remove o formulário completamente
@@ -114,7 +121,7 @@ async function submitFormWithAnimation(event) {
   await wait(500);
   elements.formLead.remove();
 
-  // 8. AGORA ativa overflow na main
+  // 8. Ativa overflow na main
   elements.mainPage.style.overflow = "auto";
 
   // 9. Anima cada seção individualmente

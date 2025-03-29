@@ -16,7 +16,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./assets/CSS/style.css" />
+    <link rel="stylesheet" href="./assets/CSS/main-page.css" />
   </head>
   <body>
     <!-- Container Principal do Formulário -->
@@ -97,28 +102,57 @@
       <header class="main-header">
         <div class="logo-container">
           <img src="assets/IMG/Logo.webp" alt="" />
-          <h1>Bookstore</h1>
+          <h1><span style="color: #ffa500">Book</span>Store</h1>
         </div>
         <div class="menu-container">
-          <h2>
-            <a href="">Home</a>
-          </h2>
-          <h2>
-            <a href="">Contato</a>
-          </h2>
+          <p>
+            <a href="" style="text-decoration: none; color: inherit">Home</a>
+          </p>
+          <p>
+            <a href="" style="text-decoration: none; color: inherit">Contato</a>
+          </p>
         </div>
       </header>
+      <!-- Fim Header -->
 
+      <!-- Conteudo Principal -->
       <main class="main-content">
-        
+        <div class="carousel-container">
+          <div class="main-image">
+            <img
+              id="main-image"
+              src="assets/IMG/Livro.webp"
+              alt="Imagem Principal"
+            />
+          </div>
 
-        
-
-
-
-
-
-
+          <!-- Swiper Carousel -->
+          <div class="swiper-container carousel">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="assets/IMG/Livro.webp" alt="Imagem 1" class="selected" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/IMG/Livro1.webp"
+                  alt="Imagem 2"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/IMG/Livro2.webp"
+                  alt="Imagem 3"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/IMG/Livro.webp"
+                  alt="Imagem 4"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
 
       <footer class="main-footer">
@@ -129,12 +163,8 @@
         </div>
       </footer>
     </div>
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/JS/main.js"></script>
     <script src="assets/JS/form.js"></script>
-    <script>
-      // Atualiza o ano atual no footer
-      document.getElementById("current-year").textContent =
-        new Date().getFullYear();
-    </script>
   </body>
 </html>

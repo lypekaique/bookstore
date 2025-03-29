@@ -213,82 +213,6 @@ body {
   }
 }
 
-/* ===== PÁGINA PRINCIPAL ===== */
-.main-page {
-  display: none;
-  opacity: 0;
-  min-height: 100vh;
-  padding: 20px;
-  transition: opacity 0.8s ease;
-  overflow: hidden; /* Garante que não mostra scroll durante a transição */
-  transition: opacity 0.8s ease, height 0s ease 0.8s;
-}
-
-.main-page.show {
-  display: block;
-  opacity: 1;
-  height: auto;
-  min-height: 100vh;
-  overflow: auto; /* Permite scroll apenas quando visível */
-}
-
-.main-header,
-.main-content,
-.main-footer {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
-}
-
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  position: fixed;   /* Torna o header fixo */
-  top: 0;            /* Fixa o header no topo */
-  left: 0;           /* Garante que o header ocupe toda a largura da tela */
-  background-color: #fff; /* Adiciona fundo branco para o header */
-  z-index: 1000;     /* Garante que o header fique sobre outros elementos */
-  padding: 10px 20px; /* Adiciona algum espaçamento interno */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destaque */
-}
-
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  justify-content: space-between;
-}
-
-.logo-container img {
-  width: 60px;
-  height: 60px;
-}
-
-.menu-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.main-content {
-  margin: 30px 0;
-  padding: 20px;
-  background: var(--white);
-  border-radius: 8px;
-  margin-top: 70px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  height: 100vh;
-}
-
-.main-footer {
-  text-align: center;
-  padding: 20px 0;
-  color: var(--text-color);
-}
-
-
 /* ===== MENSAGENS DE ERRO ===== */
 .error {
   display: block;
@@ -298,8 +222,80 @@ body {
   height: 14px;
 }
 
-/* ===== RESPONSIVIDADE ===== */
+/* ===== ANIMAÇÕES RESPONSIVAS ===== */
+/* Desktop - Animação horizontal */
+@media (min-width: 769px) {
+  .desktop-smash-animation {
+    animation: desktopSmash 0.5s ease-in-out forwards;
+  }
+
+  @keyframes desktopSmash {
+    0% {
+      width: 50%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .desktop-smash-hide {
+    animation: desktopSmashHide 0.5s ease-in-out forwards;
+  }
+
+  @keyframes desktopSmashHide {
+    0% {
+      width: 50%;
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      width: 0%;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+/* Mobile - Animação vertical */
 @media (max-width: 768px) {
+  .mobile-smash-animation {
+    position: relative;
+    z-index: 10;
+  }
+
+  .logo-container h1 {
+    font-size: 18px;
+  }
+  .mobile-expand-animation {
+    animation: mobileExpand 0.5s ease-in-out forwards;
+  }
+
+  @keyframes mobileExpand {
+    0% {
+      height: auto;
+    }
+    100% {
+      height: 100vh;
+    }
+  }
+
+  .mobile-crush-animation {
+    animation: mobileCrush 0.5s ease-in-out forwards;
+  }
+
+  @keyframes mobileCrush {
+    0% {
+      height: 200px;
+      opacity: 1;
+      margin-top: 0;
+    }
+    100% {
+      height: 0;
+      opacity: 0;
+      margin-top: -200px;
+    }
+  }
+
   .container {
     flex-direction: column;
     height: auto;
@@ -313,5 +309,16 @@ body {
 
   .image-section {
     height: 200px;
+    order: -1;
+  }
+
+  .form-container {
+    padding: 30px 20px;
+  }
+
+  .form-lead {
+    height: auto;
+    align-items: flex-start;
+    padding-top: 20px;
   }
 }
