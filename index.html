@@ -34,7 +34,7 @@
             <h2>Para Mais Informação</h2>
 
             <div class="input-box">
-              <i class="fa-solid fa-user" style="color: #e29128"></i>
+              <i class="fa-solid fa-user" style="color: #5bc0eb"></i>
               <input
                 type="text"
                 id="nome"
@@ -45,7 +45,7 @@
             </div>
 
             <div class="input-box">
-              <i class="fa-solid fa-envelope" style="color: #e29128"></i>
+              <i class="fa-solid fa-envelope" style="color: #5bc0eb"></i>
               <input
                 type="email"
                 id="email"
@@ -57,7 +57,7 @@
             </div>
 
             <div class="input-box">
-              <i class="fa-solid fa-phone" style="color: #e29128"></i>
+              <i class="fa-solid fa-phone" style="color: #5bc0eb"></i>
               <input
                 type="text"
                 id="telefone"
@@ -99,58 +99,188 @@
 
     <!-- Página Principal (inicialmente oculta) -->
     <div class="main-page" id="mainPage">
-      <header class="main-header">
-        <div class="logo-container">
-          <img src="assets/IMG/Logo.webp" alt="" />
-          <h1><span style="color: #ffa500">Book</span>Store</h1>
-        </div>
-        <div class="menu-container">
-          <p>
-            <a href="" style="text-decoration: none; color: inherit">Home</a>
-          </p>
-          <p>
-            <a href="" style="text-decoration: none; color: inherit">Contato</a>
-          </p>
+      <header class="video-header">
+        <div class="header-content">
+          <div class="logo">
+            <img src="assets/IMG/Logo.webp" alt="Logo" />
+            <span>Marca</span>
+          </div>
+          <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Ofertas</a>
+            <a href="#">Contato</a>
+          </nav>
         </div>
       </header>
       <!-- Fim Header -->
 
       <!-- Conteudo Principal -->
       <main class="main-content">
-        <div class="carousel-container">
-          <div class="main-image">
-            <img
-              id="main-image"
-              src="assets/IMG/Livro.webp"
-              alt="Imagem Principal"
-            />
+        <section class="hero-section">
+          <!-- Vídeo de fundo -->
+          <video class="background-video" autoplay muted loop>
+            <source src="" type="video/mp4" />
+          </video>
+
+          <!-- Overlay escuro -->
+          <div class="video-overlay"></div>
+
+          <!-- Conteúdo central -->
+          <div class="hero-content">
+            <h1 class="hero-title">Título Principal</h1>
+            <p class="hero-subtitle">Subtítulo descritivo</p>
           </div>
 
-          <!-- Swiper Carousel -->
-          <div class="swiper-container carousel">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="assets/IMG/Livro.webp" alt="Imagem 1" class="selected" />
+          <!-- Carrossel de navegação -->
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <!-- Itens serão adicionados via JavaScript -->
+            </div>
+          </div>
+        </section>
+        <section class="about-section">
+          <div class="about-container">
+            <div class="about-content">
+              <h2>Sobre a <span class="company-name">TravelDream</span></h2>
+              <div class="about-text">
+                <p>
+                  Na TravelDream, transformamos sonhos em experiências
+                  inesquecíveis desde 2010. Somos apaixonados por conectar
+                  pessoas a destinos extraordinários, criando memórias que duram
+                  uma vida inteira.
+                </p>
+
+                <div class="mission-vision">
+                  <div class="mv-item">
+                    <img
+                      src="https://bpa.org/wp-content/uploads/2019/01/target-mission-vision-icon-RED-BLUE.svg"
+                      alt="Missão"
+                    />
+                    <h3>Nossa Missão</h3>
+                    <p>
+                      Oferecer experiências de viagem excepcionais, com serviço
+                      personalizado e atenção aos detalhes que fazem a
+                      diferença.
+                    </p>
+                  </div>
+
+                  <div class="mv-item">
+                    <img src="assets/IMG/vision.svg" alt="Visão" />
+                    <h3>Nossa Visão</h3>
+                    <p>
+                      Ser reconhecida como a empresa de viagens mais inovadora e
+                      confiável da América Latina até 2025.
+                    </p>
+                  </div>
+                </div>
+
+                <ul class="about-features">
+                  <li><span>✓</span> +15.000 clientes satisfeitos</li>
+                  <li><span>✓</span> Presentes em 30 países</li>
+                  <li>
+                    <span>✓</span> Prêmio Melhor Operadora de Turismo 2022
+                  </li>
+                  <li><span>✓</span> Pacotes personalizados sob medida</li>
+                </ul>
               </div>
-              <div class="swiper-slide">
+            </div>
+
+            <div class="about-image">
+              <img
+                src="assets/IMG/Equipe.webp"
+                alt="Equipe TravelDream"
+                class="main-image"
+              />
+              <div class="image-overlay">
                 <img
-                  src="assets/IMG/Livro1.webp"
-                  alt="Imagem 2"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/IMG/Livro2.webp"
-                  alt="Imagem 3"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/IMG/Livro.webp"
-                  alt="Imagem 4"
+                  src="assets/IMG/viajantes.webp"
+                  alt="Viajantes felizes"
+                  class="secondary-image"
                 />
               </div>
             </div>
+          </div>
+        </section>
+        <section class="countries-gallery">
+          <h2>Explore These Beautiful Countries</h2>
+          <div class="countries-grid">
+            <!-- Brazil -->
+            <div class="country-card" data-country="brazil">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/960px-Flag_of_Brazil.svg.png"
+                alt="Brazil"
+                class="country-thumbnail"
+              />
+              <div class="country-overlay"></div>
+            </div>
+
+            <!-- Japan -->
+            <div class="country-card" data-country="japan">
+              <img
+                src="https://s4.static.brasilescola.uol.com.br/be/2022/11/bandeira-do-japao.jpg"
+                alt="Japan"
+                class="country-thumbnail"
+              />
+              <div class="country-overlay">Japan</div>
+            </div>
+
+            <!-- Italy -->
+            <div class="country-card" data-country="italy">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg"
+                alt="Italy"
+                class="country-thumbnail"
+              />
+              <div class="country-overlay">Italy</div>
+            </div>
+
+            <!-- Canada -->
+            <div class="country-card" data-country="suica">
+              <img
+                src="https://thumbs.dreamstime.com/b/bandeira-su%C3%AD%C3%A7a-6244464.jpg"
+                alt="Suica"
+                class="country-thumbnail"
+              />
+              <div class="country-overlay">Suiça</div>
+            </div>
+
+            <!-- Australia -->
+            <div class="country-card" data-country="australia">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Australia.svg/800px-Flag_of_Australia.svg.png"
+                alt="Australia"
+                class="country-thumbnail"
+              />
+              <div class="country-overlay">Australia</div>
+            </div>
+
+            <!-- South Africa -->
+            <div class="country-card" data-country="south-africa">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/640px-Flag_of_South_Africa.svg.png"
+                alt="South Africa"
+                class="country-thumbnail"
+              />
+              <div class="country-overlay">South Africa</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="country-modal">
+          <span class="close-modal">&times;</span>
+          <span class="nav-arrow prev">&#10094;</span>
+          <span class="nav-arrow next">&#10095;</span>
+
+          <div class="modal-content">
+            <img id="modal-image" src="" alt="" />
+            <div class="image-counter"></div>
+          </div>
+
+          <div class="country-info">
+            <h3 id="modal-country-name"></h3>
+            <p id="image-caption"></p>
           </div>
         </div>
       </main>
@@ -163,8 +293,10 @@
         </div>
       </footer>
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/JS/main.js"></script>
     <script src="assets/JS/form.js"></script>
+    <script src="assets/JS/grid.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/JS/header.js"></script>
   </body>
 </html>
